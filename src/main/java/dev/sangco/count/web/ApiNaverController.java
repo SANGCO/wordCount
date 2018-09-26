@@ -16,14 +16,14 @@ import java.net.URLEncoder;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-@RequestMapping("/api")
-public class ApiBasicController {
+@RequestMapping("/api/naver")
+public class ApiNaverController {
 
     //  TODO 로거 세팅하기
     private final String clientId; //애플리케이션 클라이언트 아이디값";
     private final String clientSecret; //애플리케이션 클라이언트 시크릿값";
 
-    public ApiBasicController(MessageSourceAccessor msa) {
+    public ApiNaverController(MessageSourceAccessor msa) {
         clientId = msa.getMessage("naver.clientId");
         clientSecret = msa.getMessage("naver.clientSecret");
     }
